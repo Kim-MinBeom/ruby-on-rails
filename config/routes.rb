@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root :to=> "home#index"
+  resources :books
   resources :products
   resources :posts
   get 'home/index'
