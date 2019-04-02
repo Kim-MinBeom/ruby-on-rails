@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :comments
   resources :users
   root :to=> "home#index"
   resources :books
   resources :products
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   get 'home/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
